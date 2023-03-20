@@ -1139,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &453686693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1834,6 +1834,7 @@ GameObject:
   - component: {fileID: 721036902}
   - component: {fileID: 721036901}
   - component: {fileID: 721036900}
+  - component: {fileID: 721036903}
   m_Layer: 5
   m_Name: AdsReviveButton
   m_TagString: Untagged
@@ -1905,7 +1906,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 721036901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 721036903}
+        m_TargetAssemblyTypeName: Ads2, Assembly-CSharp
+        m_MethodName: ShowAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &721036901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,6 +1957,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721036898}
   m_CullTransparentMesh: 1
+--- !u!114 &721036903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721036898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a0fb17f747daa428cafccc5c07c882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737284243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,7 +2062,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757838010}
+  - component: {fileID: 757838013}
   - component: {fileID: 757838011}
+  - component: {fileID: 757838012}
   m_Layer: 0
   m_Name: AdsManager
   m_TagString: Untagged
@@ -2076,8 +2103,38 @@ MonoBehaviour:
   gameOverCanvas: {fileID: 453686692}
   setting: {fileID: 1267692107}
   _showAdButton: {fileID: 721036900}
-  _androidAdUnitId: 5211221
-  _iOSAdUnitId: 5211220
+  _androidAdUnitId: Rewarded_Android
+  _iOSAdUnitId: Rewarded_iOS
+--- !u!114 &757838012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757838008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94a5ba728d52ad4eade57583d4f1ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bannerPosition: 4
+  _androidAdUnitId: Banner_Android
+  _iOSAdUnitId: Banner_iOS
+--- !u!114 &757838013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757838008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c7078b7a208fe438fc856fb22d60b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5211221
+  _iOSGameId: 5211220
+  _testMode: 1
 --- !u!1 &811856010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,11 +2733,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.2336125
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2701,7 +2758,7 @@ MonoBehaviour:
   setting: {fileID: 1267692107}
   damage: {fileID: 1267692107}
   bonusTime: {fileID: 426731949}
-  jumpSpeed: 6
+  jumpSpeed: 8
   groundCheck: {fileID: 307507570}
   checkRadius: 0.5
   WhatIsGround:
@@ -2725,7 +2782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1082927880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3352,7 +3409,7 @@ MonoBehaviour:
   enemyHealth: 100
   bonusTimeChoice: 1
   isPress: 0
-  enemyKillCount: 9
+  enemyKillCount: 0
   isSpawn: 0
 --- !u!4 &1267692108
 Transform:
@@ -6464,7 +6521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137855726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.91899234, y: -0.47489312, z: -0.05598734}
+  m_LocalPosition: {x: 0.91899234, y: -0.47489312, z: 2.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

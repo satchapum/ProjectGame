@@ -55,7 +55,7 @@ public class BonusTime : MonoBehaviour
         woodButtonBonus.SetActive(false);
     }
     void OnBonusTime() {
-        int numberType = Random.Range(1,3);
+        int numberType = Random.Range(1,4);
         if(setting.bonusTimeChoice == 1 && setting.isSpawn == true) {
             if(numberType == 1) {
                 setting.Score += setting.enemyScore * 2; 

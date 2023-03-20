@@ -95,8 +95,8 @@ public class ReviveAdsScript : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSh
             setting.playerHealth = 100;
             // Resume game
             gameOverCanvas.SetActive(false);
+            setting.isSpawn = false;
             mainCanvas.SetActive(true);
-            setting.isSpawn = true;
             // Load another ad:
             // Advertisement.Load(_adUnitId, this);
         }
