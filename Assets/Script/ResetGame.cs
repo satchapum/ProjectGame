@@ -7,7 +7,8 @@ public class ResetGame : MonoBehaviour
 {
     [SerializeField] GameObject menuButton;
     public void Reset() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
     
 }

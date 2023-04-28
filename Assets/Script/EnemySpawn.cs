@@ -11,7 +11,6 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] GameSettingScript setting;
 
     // Start is called before the first frame update
-    int Score = 200;
     int numberType;
     public float spawnTime;
     public float minSpawnDelay;

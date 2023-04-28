@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class ScoreScript : MonoBehaviour
+public class HighScore : MonoBehaviour
 {
-    [SerializeField] GameSettingScript score;
+    [SerializeField] private FloatSO scoreSO;
     [SerializeField] TextMeshProUGUI scoreUi;
 
     void Update()
     {
-        scoreUi.text = "Score : " + score.Score.ToString();
+        scoreUi.text = "High Score : " + scoreSO.Value.ToString();
     }
 }
