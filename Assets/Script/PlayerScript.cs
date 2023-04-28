@@ -13,18 +13,25 @@ public class PlayerScript : MonoBehaviour
     public float checkRadius;
     public LayerMask WhatIsGround;
     public int KillObjectForBonus = 10;
+    
     Rigidbody2D rb;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-         if(setting.enemyKillCount == KillObjectForBonus) {
+        if(setting.enemyKillCount == KillObjectForBonus) {
             bonusTime.SetActive(true);
+        }
+
+        if(setting.playerHealth <= 0)
+        {
+
         }
     }
     public void Jump() 

@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class HealthScript : MonoBehaviour
+public class EnemyInfo : MonoBehaviour
 {
+    // Start is called before the first frame update
     [SerializeField] GameSettingScript setting;
     [SerializeField] TextMeshProUGUI healtStatus;
     void Update()
     {
-        healtStatus.text = "HP : " + setting.playerHealth.ToString();
+        healtStatus.text = "Enemy Healt : " + setting.enemyHealth.ToString();
     }
 }

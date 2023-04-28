@@ -13,12 +13,12 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     int Score = 200;
     int numberType;
-    int numberRandom;
-    public int spawnTime;
-    public int spawnDelay;  
+    public float spawnTime;
+    public float minSpawnDelay;
+    public float maxSpawnDelay;  
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", spawnTime, spawnDelay);
+        InvokeRepeating("SpawnEnemy", spawnTime, GetRandomSpawnDelay());
     }
 
     // Update is called once per frame
@@ -42,6 +42,12 @@ public class EnemySpawn : MonoBehaviour
                 GameObject obj = Instantiate(knightWood, enemyPos.position, enemyPos.rotation);
                 obj.SetActive(true);
             }
+            Invoke("SpawnEnemy", GetRandomSpawnDelay());
         }
+    }
+
+    float GetRandomSpawnDelay()
+    {
+        return Random.Range(minSpawnDelay, maxSpawnDelay);
     }
 }
