@@ -11,7 +11,7 @@ public class GameSettingScript : MonoBehaviour
     [SerializeField] private FloatSO hpSO;
     [SerializeField] private FloatSO damageSO;
     public bool gameEnd = false;
-    public int allDamage;
+    public float allDamage;
     public int Score;
     public int enemyScore;
     public int enemySpeed;
@@ -26,6 +26,7 @@ public class GameSettingScript : MonoBehaviour
     public bool isSpawn;
     void Start()
     {
+        allDamage = damageSO.Value;
         playerHealth = hpSO.Value;
         maxHealth = playerHealth;
     }
@@ -43,6 +44,5 @@ public class GameSettingScript : MonoBehaviour
                 scoreSO.Value = Score;
             }
         }
-            
     }
 }

@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2499cd26e782b8d4ba3ea65c2294065d, type: 2}
   m_sharedMaterial: {fileID: -6258156639109411440, guid: 2499cd26e782b8d4ba3ea65c2294065d, type: 2}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 115.35
+  m_fontSize: 121.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -531,7 +531,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 460073753}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1078255518}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: Shop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &460073753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,7 +858,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -49.105606, w: 0}
+  m_margin: {x: 0, y: 0, z: -212.622, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -869,6 +881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 719711836}
+  - component: {fileID: 719711840}
   - component: {fileID: 719711839}
   - component: {fileID: 719711838}
   - component: {fileID: 719711837}
@@ -943,7 +956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 719711838}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 719711840}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: UpgradeHealt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &719711838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +1007,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719711835}
   m_CullTransparentMesh: 1
+--- !u!114 &719711840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719711835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfac2a682ee6e7f4392045ec13de7f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSO: {fileID: 11400000, guid: 8308304cf2185ec4bb266da41e9571ec, type: 2}
+  healthSO: {fileID: 11400000, guid: dd429396f5719954dac0fa995b3a28be, type: 2}
+  lvHealthSO: {fileID: 11400000, guid: f7d79d1ce56209f4da6c80716cf00b6d, type: 2}
+  lvDamageSO: {fileID: 11400000, guid: 51395ccc1cfe84c438d89af9426aa65d, type: 2}
+  coinSO: {fileID: 11400000, guid: 8dd98d9c030a80644a744125c81942a5, type: 2}
+  CurentCoinUseHpSO: {fileID: 11400000, guid: b99c06564dd2c83419261cf4ed730346, type: 2}
+  CurentCoinUseDamageSO: {fileID: 11400000, guid: fb5fe8c95a6097343ab01f3f9b5f1eac, type: 2}
+  CurentCoinUseHp: {fileID: 130843489}
+  CurentCoinUseDamage: {fileID: 1957707359}
+  CurentDamage: {fileID: 623592968}
+  CurentHealth: {fileID: 1156266379}
+  CurentCoin: {fileID: 1607626638}
 --- !u!1 &793208323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1006509215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1570,6 +1619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1078255516}
   setting: {fileID: 1006509214}
+  shop: {fileID: 1006509214}
 --- !u!1 &1012285445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1078255517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1880,6 +1930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1078255516}
   setting: {fileID: 1422341495}
+  shop: {fileID: 1006509214}
 --- !u!1 &1100992290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,7 +2322,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -49.105606, w: 0}
+  m_margin: {x: 0, y: 0, z: -212.62198, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2927,6 +2978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1078255516}
   setting: {fileID: 1422341495}
+  shop: {fileID: 1006509214}
 --- !u!114 &1422341498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3187,6 +3239,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1599142280}
+  - component: {fileID: 1599142284}
   - component: {fileID: 1599142283}
   - component: {fileID: 1599142282}
   - component: {fileID: 1599142281}
@@ -3261,7 +3314,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1599142282}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1599142284}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: UpgradeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1599142282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3300,6 +3365,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599142279}
   m_CullTransparentMesh: 1
+--- !u!114 &1599142284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599142279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfac2a682ee6e7f4392045ec13de7f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageSO: {fileID: 11400000, guid: 8308304cf2185ec4bb266da41e9571ec, type: 2}
+  healthSO: {fileID: 11400000, guid: dd429396f5719954dac0fa995b3a28be, type: 2}
+  lvHealthSO: {fileID: 11400000, guid: f7d79d1ce56209f4da6c80716cf00b6d, type: 2}
+  lvDamageSO: {fileID: 11400000, guid: 51395ccc1cfe84c438d89af9426aa65d, type: 2}
+  coinSO: {fileID: 11400000, guid: 8dd98d9c030a80644a744125c81942a5, type: 2}
+  CurentCoinUseHpSO: {fileID: 11400000, guid: b99c06564dd2c83419261cf4ed730346, type: 2}
+  CurentCoinUseDamageSO: {fileID: 11400000, guid: fb5fe8c95a6097343ab01f3f9b5f1eac, type: 2}
+  CurentCoinUseHp: {fileID: 130843489}
+  CurentCoinUseDamage: {fileID: 1957707359}
+  CurentDamage: {fileID: 623592968}
+  CurentHealth: {fileID: 1156266379}
+  CurentCoin: {fileID: 1607626638}
 --- !u!1 &1607626636
 GameObject:
   m_ObjectHideFlags: 0
@@ -3435,6 +3524,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607626636}
   m_CullTransparentMesh: 1
+--- !u!1 &1706974076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706974078}
+  - component: {fileID: 1706974077}
+  m_Layer: 0
+  m_Name: LoopSOng
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1706974077
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706974076}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 94860b46edd5fe74bb2d444c10d10785, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 0d758655abdbfec44bd551ba06811b3c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1706974078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706974076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1252.7401, y: 574.545, z: 0.42837316}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789904660
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,7 +4382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2499cd26e782b8d4ba3ea65c2294065d, type: 2}
   m_sharedMaterial: {fileID: -6258156639109411440, guid: 2499cd26e782b8d4ba3ea65c2294065d, type: 2}
@@ -4192,7 +4409,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 115.35
+  m_fontSize: 121.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

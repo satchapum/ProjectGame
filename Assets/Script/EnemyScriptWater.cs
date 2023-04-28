@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScriptWater : MonoBehaviour
 {
-    public int health;
+    public float health;
     [SerializeField] GameSettingScript setting;
     public Transform bulletPos;
     public GameObject bullet;

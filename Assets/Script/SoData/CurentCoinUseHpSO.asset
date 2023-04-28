@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d37f9da737e7cc489584c840dc30430, type: 3}
-  m_Name: DamageSO
+  m_Name: CurentCoinUseHpSO
   m_EditorClassIdentifier: 
   _value: 10

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class EnemyScriptFire : MonoBehaviour
 {
-    public int health;
+    public float health;
     [SerializeField] GameSettingScript setting;
     public Transform bulletPos;
     public GameObject bullet;

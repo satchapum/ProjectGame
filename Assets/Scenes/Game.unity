@@ -573,7 +573,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 94860b46edd5fe74bb2d444c10d10785, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0d758655abdbfec44bd551ba06811b3c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b90272e636d1e2a4aac0e90f51fe7744, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5784,6 +5784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuButton: {fileID: 563568271}
+  setting: {fileID: 1267692107}
+  coinSO: {fileID: 11400000, guid: 8dd98d9c030a80644a744125c81942a5, type: 2}
 --- !u!1 &566112241
 GameObject:
   m_ObjectHideFlags: 0
@@ -8501,7 +8503,7 @@ MonoBehaviour:
   enemyPos: {fileID: 902431098}
   setting: {fileID: 1267692107}
   spawnTime: 2
-  minSpawnDelay: 0.8
+  minSpawnDelay: 1
   maxSpawnDelay: 2
 --- !u!4 &902431098
 Transform:
@@ -10390,6 +10392,8 @@ MonoBehaviour:
   mainCanvas: {fileID: 1112039719}
   enemySpawn: {fileID: 902431096}
   scoreSO: {fileID: 11400000, guid: 999bd5221b076d549888540ceaad01ec, type: 2}
+  hpSO: {fileID: 11400000, guid: dd429396f5719954dac0fa995b3a28be, type: 2}
+  damageSO: {fileID: 11400000, guid: 8308304cf2185ec4bb266da41e9571ec, type: 2}
   gameEnd: 0
   allDamage: 20
   Score: 0
@@ -10689,6 +10693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuButton: {fileID: 1307858579}
+  setting: {fileID: 1267692107}
+  coinSO: {fileID: 11400000, guid: 8dd98d9c030a80644a744125c81942a5, type: 2}
 --- !u!114 &1307858582
 MonoBehaviour:
   m_ObjectHideFlags: 0

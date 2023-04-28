@@ -46,15 +46,15 @@ public class PlayerScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("FireBall") && gameObject.CompareTag("Player")) 
         {
-            setting.playerHealth = setting.playerHealth-(damage.allDamage);
+            setting.playerHealth = setting.playerHealth-(damage.allDamage / 2);
         }
         else if(other.CompareTag("WaterBall") && gameObject.CompareTag("Player")) 
         {
-            setting.playerHealth = setting.playerHealth-(damage.allDamage);
+            setting.playerHealth = setting.playerHealth-(damage.allDamage / 2);
         }
         else if(other.CompareTag("WoodBall") && gameObject.CompareTag("Player")) 
         {
-            setting.playerHealth = setting.playerHealth-(damage.allDamage);
+            setting.playerHealth = setting.playerHealth-(damage.allDamage / 2);
         }
     }
     private void FixedUpdate() 
