@@ -10394,6 +10394,8 @@ MonoBehaviour:
   scoreSO: {fileID: 11400000, guid: 999bd5221b076d549888540ceaad01ec, type: 2}
   hpSO: {fileID: 11400000, guid: dd429396f5719954dac0fa995b3a28be, type: 2}
   damageSO: {fileID: 11400000, guid: 8308304cf2185ec4bb266da41e9571ec, type: 2}
+  lvHealthSO: {fileID: 11400000, guid: d4f3c4800f53abb4a96aa888c79263c6, type: 2}
+  lvDamageSO: {fileID: 11400000, guid: 1b37263eade44e44ba01cfbc4e7ab6b7, type: 2}
   gameEnd: 0
   allDamage: 20
   Score: 0
@@ -10408,6 +10410,8 @@ MonoBehaviour:
   isPress: 0
   enemyKillCount: 0
   isSpawn: 0
+  lvDamage: 0
+  lvHealth: 0
 --- !u!4 &1267692108
 Transform:
   m_ObjectHideFlags: 0

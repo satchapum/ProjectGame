@@ -11,7 +11,7 @@ public class ResetGame : MonoBehaviour
     public void Reset() {
         coinSO.Value += setting.enemyKillCount;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
     
 }

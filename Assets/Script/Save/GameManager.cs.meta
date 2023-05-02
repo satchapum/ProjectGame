@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f18b090f8c02c3e42b2dcd28ac508860
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - damageSO: {fileID: 11400000, guid: 8308304cf2185ec4bb266da41e9571ec, type: 2}
+  - healthSO: {fileID: 11400000, guid: dd429396f5719954dac0fa995b3a28be, type: 2}
+  - lvHealthSO: {fileID: 11400000, guid: f7d79d1ce56209f4da6c80716cf00b6d, type: 2}
+  - lvDamageSO: {fileID: 11400000, guid: 51395ccc1cfe84c438d89af9426aa65d, type: 2}
+  - coinSO: {fileID: 11400000, guid: 8dd98d9c030a80644a744125c81942a5, type: 2}
+  - CurrentCoinUseHpSO: {fileID: 11400000, guid: b99c06564dd2c83419261cf4ed730346, type: 2}
+  - CurrentCoinUseDamageSO: {fileID: 11400000, guid: fb5fe8c95a6097343ab01f3f9b5f1eac, type: 2}
+  - score: {fileID: 11400000, guid: 999bd5221b076d549888540ceaad01ec, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

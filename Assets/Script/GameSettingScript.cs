@@ -10,6 +10,9 @@ public class GameSettingScript : MonoBehaviour
     [SerializeField] private FloatSO scoreSO;
     [SerializeField] private FloatSO hpSO;
     [SerializeField] private FloatSO damageSO;
+    [SerializeField] private FloatSO lvHealthSO;
+    [SerializeField] private FloatSO lvDamageSO;
+
     public bool gameEnd = false;
     public float allDamage;
     public int Score;
@@ -24,8 +27,12 @@ public class GameSettingScript : MonoBehaviour
     public bool isPress = false;
     public int enemyKillCount;
     public bool isSpawn;
+    public float lvDamage;
+    public float lvHealth;
     void Start()
     {
+        lvHealth = lvHealthSO.Value;
+        lvDamage = lvDamageSO.Value;
         allDamage = damageSO.Value;
         playerHealth = hpSO.Value;
         maxHealth = playerHealth;

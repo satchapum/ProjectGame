@@ -10,48 +10,52 @@ public class Upgrade : MonoBehaviour
     [SerializeField] private FloatSO lvHealthSO;
     [SerializeField] private FloatSO lvDamageSO;
     [SerializeField] private FloatSO coinSO;
-    [SerializeField] private FloatSO CurentCoinUseHpSO;
-    [SerializeField] private FloatSO CurentCoinUseDamageSO;
-    [SerializeField] TextMeshProUGUI CurentCoinUseHp;
-    [SerializeField] TextMeshProUGUI CurentCoinUseDamage;
-    [SerializeField] TextMeshProUGUI CurentDamage;
-    [SerializeField] TextMeshProUGUI CurentHealth;
-    [SerializeField] TextMeshProUGUI CurentCoin;
-    public void Start()
+    [SerializeField] private float CurrentCoinUseHpSO;
+    [SerializeField] private float CurrentCoinUseDamageSO;
+    [SerializeField] TextMeshProUGUI CurrentCoinUseHp;
+    [SerializeField] TextMeshProUGUI CurrentCoinUseDamage;
+    [SerializeField] TextMeshProUGUI CurrentDamage;
+    [SerializeField] TextMeshProUGUI CurrentHealth;
+    [SerializeField] TextMeshProUGUI CurrentCoin;
+    private float lvHealth;
+    private float lvDamage;
+    public void Awake()
     {
-        CurentCoinUseDamageSO.Value = 10 * lvDamageSO.Value;
-        CurentCoinUseHpSO.Value = 10 * lvDamageSO.Value;
-        CurentCoinUseHp.text = CurentCoinUseHpSO.Value.ToString();
-        CurentCoinUseDamage.text = CurentCoinUseDamageSO.Value.ToString();
-        CurentCoin.text = "Your coins : " + coinSO.Value.ToString();
-        CurentDamage.text =  "Current Damage : " + damageSO.Value.ToString();
-        CurentHealth.text =  "Current Health : " + healthSO.Value.ToString();
+        lvHealth = lvHealthSO.Value;
+        lvDamage = lvDamageSO.Value;
+        CurrentCoinUseDamageSO = 10 * lvDamageSO.Value;
+        CurrentCoinUseHpSO = 10 * lvHealthSO.Value;
+        CurrentCoinUseHp.text = CurrentCoinUseHpSO.ToString();
+        CurrentCoinUseDamage.text = CurrentCoinUseDamageSO.ToString();
+        CurrentCoin.text = "Your coins : " + coinSO.Value.ToString();
+        CurrentDamage.text =  "Current Damage : " + damageSO.Value.ToString();
+        CurrentHealth.text =  "Current Health : " + healthSO.Value.ToString();
     }
     public void UpgradeDamage()
     {
-        if(coinSO.Value >= CurentCoinUseDamageSO.Value)
+        if(coinSO.Value >= CurrentCoinUseDamageSO)
         {
-            coinSO.Value -= CurentCoinUseDamageSO.Value;
+            coinSO.Value -= CurrentCoinUseDamageSO;
             damageSO.Value = 10 + (10 * lvDamageSO.Value);
-            lvDamageSO.Value++;
-            CurentCoinUseDamageSO.Value = 10 * lvDamageSO.Value;
-            CurentCoinUseDamage.text = CurentCoinUseDamageSO.Value.ToString();
-            CurentDamage.text =  "Current Damage : " + damageSO.Value.ToString();
-            CurentCoin.text = "Your coins : " + coinSO.Value.ToString();
+            lvDamageSO.Value = lvDamageSO.Value + 1;
+            CurrentCoinUseDamageSO = 10 * lvDamageSO.Value;
+            CurrentCoinUseDamage.text = CurrentCoinUseDamageSO.ToString();
+            CurrentDamage.text =  "Current Damage : " + damageSO.Value.ToString();
+            CurrentCoin.text = "Your coins : " + coinSO.Value.ToString();
         }
         
     }
     public void UpgradeHealt()
     {
-        if(coinSO.Value >= CurentCoinUseHpSO.Value)
+        if(coinSO.Value >= CurrentCoinUseHpSO)
         {
-            coinSO.Value -= CurentCoinUseHpSO.Value;
+            coinSO.Value -= CurrentCoinUseHpSO;
             healthSO.Value = 100 + (10 * lvHealthSO.Value);
-            lvHealthSO.Value++;
-            CurentCoinUseHpSO.Value = 10 * lvHealthSO.Value;
-            CurentCoinUseHp.text =  CurentCoinUseHpSO.Value.ToString();
-            CurentHealth.text =  "Current Health : " + healthSO.Value.ToString();
-            CurentCoin.text = "Your coins : " + coinSO.Value.ToString();
+            lvHealthSO.Value = lvHealthSO.Value + 1;
+            CurrentCoinUseHpSO = 10 * lvHealthSO.Value;
+            CurrentCoinUseHp.text =  CurrentCoinUseHpSO.ToString();
+            CurrentHealth.text =  "Current Health : " + healthSO.Value.ToString();
+            CurrentCoin.text = "Your coins : " + coinSO.Value.ToString();
         }
 
     }
