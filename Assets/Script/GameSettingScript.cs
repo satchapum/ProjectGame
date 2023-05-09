@@ -7,11 +7,13 @@ public class GameSettingScript : MonoBehaviour
     [SerializeField] GameObject gameOverScene;
     [SerializeField] GameObject mainCanvas;
     [SerializeField] GameObject enemySpawn;
-    [SerializeField] private FloatSO scoreSO;
-    [SerializeField] private FloatSO hpSO;
-    [SerializeField] private FloatSO damageSO;
-    [SerializeField] private FloatSO lvHealthSO;
-    [SerializeField] private FloatSO lvDamageSO;
+    [SerializeField] public FloatSO scoreSO;
+    [SerializeField] public FloatSO hpSO;
+    [SerializeField] public FloatSO damageSO;
+    [SerializeField] public FloatSO lvHealthSO;
+    [SerializeField] public FloatSO lvDamageSO;
+    [SerializeField] public FloatSO coinSO;
+    public PlayerPrefsSave saveAndLoad;
 
     public bool gameEnd = false;
     public float allDamage;
@@ -36,12 +38,15 @@ public class GameSettingScript : MonoBehaviour
         allDamage = damageSO.Value;
         playerHealth = hpSO.Value;
         maxHealth = playerHealth;
+
     }
     void Update()
     {
+        
+        
         if(playerHealth <= 0) {
+            playerHealth = 100;
             gameEnd = true;
-            playerHealth = 0;
             isSpawn = true;
             enemySpawn.SetActive(false);
             gameOverScene.SetActive(true);
@@ -50,6 +55,7 @@ public class GameSettingScript : MonoBehaviour
             {
                 scoreSO.Value = Score;
             }
+            coinSO.Value += enemyKillCount;
         }
     }
 }

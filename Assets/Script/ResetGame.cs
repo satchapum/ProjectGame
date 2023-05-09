@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ResetGame : MonoBehaviour
 {
+    
     [SerializeField] GameObject menuButton;
     [SerializeField] GameSettingScript setting;
-    [SerializeField] private FloatSO coinSO;
+    public PlayerPrefsSave saveAndLoad;
     public void Reset() {
-        coinSO.Value += setting.enemyKillCount;
+        saveAndLoad.Savedata();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
