@@ -6,18 +6,6 @@ public class ButtonBonus : MonoBehaviour
 {
     [SerializeField] GameSettingScript setting;
     public string buttonType;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void whenButtonClicked()
     {
         while(setting.isPress == false) {

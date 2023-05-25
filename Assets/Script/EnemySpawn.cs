@@ -10,7 +10,6 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] Transform enemyPos;
     [SerializeField] GameSettingScript setting;
 
-    // Start is called before the first frame update
     int numberType;
     public float spawnTime;
     public float minSpawnDelay;
@@ -18,12 +17,6 @@ public class EnemySpawn : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnEnemy", spawnTime, GetRandomSpawnDelay());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void SpawnEnemy() {

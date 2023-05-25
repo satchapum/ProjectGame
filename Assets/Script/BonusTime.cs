@@ -14,14 +14,6 @@ public class BonusTime : MonoBehaviour
     [SerializeField] GameSettingScript setting;
     [SerializeField] PlayerScript firstScore;
     
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if(setting.enemyKillCount >= firstScore.KillObjectForBonus) {
